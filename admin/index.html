@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Admin for Unicorn Guide</title>
+  <link rel="stylesheet" href="/admin/css/bootstrap.min.css">
+  <script src="/admin/scripts/angular.min.js"></script>
+  <script src="https://cdn.firebase.com/js/client/2.2.4/firebase.js"></script>
+  <script src="https://cdn.firebase.com/libs/angularfire/1.1.2/angularfire.min.js"></script>
+  <script src="/admin/scripts/admin.js"></script>
+</head>
+<body ng-app="unicornguide">
+<div class="container">
+  <div class="page-header">
+    <h1>Unicorn Guide</h1>
+    <h2>Admin Panel</h2>
+  </div>
+</div>
+<div class="container" ng-controller="userController as user" ng-show="!user.loggedIn">
+  <form class="well form">
+    <h3>Login</h3>
+    <div class="row">
+      <div class="col-xs-6">
+        <input type="text" ng-model="user.email" placeholder="email" class="form-control">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-6">
+        <input type="text" ng-model="user.password" placeholder="password" class="form-control">
+      </div>
+    </div>
+    <div class="row">
+      <div class="btn-group">
+        <button class="btn btn-primary" ng-click="user.login()">Login</button>
+        <button class="btn btn-info" ng-click="user.signup()">Signup</button>
+      </div>
+    </div>
+  </form>
+</div>
+<div class="container" ng-controller="AccelController as accel" ng-show="accel.loggedIn">
+  <h3>Accelerators</h3>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="a in accel.data">
+        <td ng-bind="a.name"></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3>Add a New Accelerator</h3>
+  <form class="form">
+    <div class="form-group">
+      <input type="text" class="form-control" ng-model="accel.new.name" placeholder="Name">
+      <input type="text" class="form-control" ng-model="accel.new.location" placeholder="Location">
+      <input type="text" class="form-control" ng-model="accel.new.url" placeholder="URL">
+      <input type="text" class="form-control" ng-model="accel.new.applicants" placeholder="Applicants">
+      <input type="text" class="form-control" ng-model="accel.new.class_size" placeholder="Class size">
+      <input type="text" class="form-control" ng-model="accel.new.acceptance_rate" placeholder="Acceptance Rate">
+      <input type="text" class="form-control" ng-model="accel.new.capital" placeholder="Capital">
+      <input type="text" class="form-control" ng-model="accel.new.equity_stake" placeholder="Equity Stake">
+      <input type="text" class="form-control" ng-model="accel.new.convertable_notes" placeholder="Convertable Notes">
+      <input type="text" class="form-control" ng-model="accel.new.average_age" placeholder="Average Age">
+      <input type="text" class="form-control" ng-model="accel.new.work_experience" placeholder="Work Experience">
+      <input type="text" class="form-control" ng-model="accel.new.university" placeholder="University">
+      <input type="text" class="form-control" ng-model="accel.new.number_of_years_together" placeholder="Number of Years together">
+      <input type="text" class="form-control" ng-model="accel.new.number_of_projects_built_together" placeholder="Number of projects built together">
+      <input type="text" class="form-control" ng-model="accel.new.industry_focus" placeholder="Industry focus (a list of various industries)">
+      <input type="text" class="form-control" ng-model="accel.new.number_of_tenants" placeholder="startup_companies_in_2014 Number of tenants/startup companies in 2014">
+      <input type="text" class="form-control" ng-model="accel.new.square_footage_of_space" placeholder="Square footage of space">
+      <input type="text" class="form-control" ng-model="accel.new.number_of_companies_that_graduated_in_2014" placeholder="Number of companies that graduated in 2014">
+      <input type="text" class="form-control" ng-model="accel.new.total_funding" placeholder="Total Funding">
+      <input type="text" class="form-control" ng-model="accel.new.total_exit_values" placeholder="Total Exit Values">
+      <input type="text" class="form-control" ng-model="accel.new.graduated_companies" placeholder="Graduated Companies">
+      <input type="text" class="form-control" ng-model="accel.new.acquired_companies" placeholder="Acquired Companies">
+      <input type="text" class="form-control" ng-model="accel.new.order" placeholder="Sorting Priority">
+    </div>
+    <div class="form-group">
+      <button class="btn btn-primary" ng-click="accel.addNew()">Save</button>
+    </div>
+  </form>
+
+</div>
+</body>
+</html>

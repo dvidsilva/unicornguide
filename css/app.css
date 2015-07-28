@@ -1,3 +1,14 @@
+html, body {
+  height: 100%;
+}
+body > main {
+  min-height: 100%;
+}
+body > main:after {
+  content: "";
+  display: block;
+}
+
 .bgcream1 {
   background-color: #FAFAE8;
 }
@@ -48,6 +59,7 @@
 }
 #header {
   min-height: 90px;
+  margin-bottom: 5px;
 }
 #header .logo, #header .menu, #header .slogan {
   height: 90px;
@@ -82,4 +94,9 @@
     height: 25px;
     text-align: center;
   }
+}
+
+
+#footer {
+  padding: 1em;
 }

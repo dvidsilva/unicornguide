@@ -16,14 +16,14 @@
     <header id="header">
       <div class="container-fluid nomargin nopadding">
         <div class="col-sm-3 logo">
-          <a href="/#/"><img src="/img/logo.png" alt="Unicor Guide Logo" height="100"></a>
+          <a ui-sref="home"><img src="/img/logo.png" alt="Unicor Guide Logo" height="100"></a>
         </div>
         <div class="col-sm-4 bggraydark cream1  nomargin  slogan">
           <h2 >Level up your startup</h2>
         </div>
         <div class="col-sm-5 menu nomargin nopadding ">
           <nav>
-            <a href="/#/" class="cream1 bgsea1">Accelerators</a>
+            <a ui-sref="accelerators" class="cream1 bgsea1">Accelerators</a>
             <a href="/#/" class="cream1 bgred1">Incubators</a>
             <a href="/#/" class="cream1 bgsea2">About Us</a>
             <a href="/#/" class="cream1 bgred2">Contact Us</a>
@@ -32,5 +32,8 @@
       </div>
     </header>
     <main ui-view></main>
+    <footer id="footer" class="bggraydark">
+      <p class="cream1 text-center"><strong>&copy; 2015 | @sydneylai @dvidsilva </strong></p>
+    </footer>
   </body>
 </html>

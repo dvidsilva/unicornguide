@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Unicorn Guide</title>
+    <link rel="stylesheet" href="/admin/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/app.css">
+    <script src="/admin/scripts/angular.min.js"></script>
+    <script src="/admin/scripts/angular-ui-router.min.js"></script>
+    <script src="https://cdn.firebase.com/js/client/2.2.4/firebase.js"></script>
+    <script src="https://cdn.firebase.com/libs/angularfire/1.1.2/angularfire.min.js"></script>
+    <script src="/scripts/app.js"></script>
+  </head>
+  <body ng-app="unicornguide" class='bgcream1'>
+    <header id="header">
+      <div class="container-fluid nomargin nopadding">
+        <div class="col-sm-3 logo">
+          <a href="/#/"><img src="/img/logo.png" alt="Unicor Guide Logo" height="100"></a>
+        </div>
+        <div class="col-sm-4 bggraydark cream1  nomargin  slogan">
+          <h2 >Level up your startup</h2>
+        </div>
+        <div class="col-sm-5 menu nomargin nopadding ">
+          <nav>
+            <a href="/#/" class="cream1 bgsea1">Accelerators</a>
+            <a href="/#/" class="cream1 bgred1">Incubators</a>
+            <a href="/#/" class="cream1 bgsea2">About Us</a>
+            <a href="/#/" class="cream1 bgred2">Contact Us</a>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <main ui-view></main>
+  </body>
+</html>

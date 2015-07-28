@@ -48,7 +48,6 @@ angular.module('unicornguide', ['firebase'])
   });
 
   _self.data = $firebaseArray(FB.child("accelerators"));
-
   _self.addNew = function () {
     $log.info(_self.new);
     _self.data.$add(_self.new);

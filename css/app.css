@@ -96,6 +96,19 @@ body > main:after {
   }
 }
 
+#accelerator {}
+
+#accelerator.cover {
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+#accelerator > .content {
+  margin-top: 20px;
+  background: rgba(146, 202, 191, 0.9);
+  min-height: 500px;
+  padding: 1em;
+}
 
 #footer {
   padding: 1em;

@@ -40,15 +40,17 @@
 </div>
 <div class="container" ng-controller="AccelController as accel" ng-show="accel.loggedIn">
   <h3>Accelerators</h3>
-  <table class="table">
+  <table class="table table-bordered table-striped">
     <thead>
       <tr>
         <th>Name</th>
+        <th>Preview</th>
       </tr>
     </thead>
     <tbody>
       <tr ng-repeat="a in accel.data">
-        <td><a ng-bind="a.name" ng-click="accel.select(a)"></a></td>
+        <td><a ng-bind="a.name" href="#/" ng-click="accel.select(a)"></a></td>
+        <td><a ng-bind="a.slug" ng-href="/#/accelerator/{{a.slug}}" target="_blank"></a></td>
       </tr>
     </tbody>
   </table>
@@ -59,6 +61,7 @@
       <input type="text" class="form-control" ng-model="accel.new.name" placeholder="Name">
       <input type="text" class="form-control" ng-model="accel.new.slug" placeholder="Slug (for URL)">
       <input type="text" class="form-control" ng-model="accel.new.location" placeholder="Location">
+      <input type="text" class="form-control" ng-model="accel.new.address" placeholder="Address">
       <input type="text" class="form-control" ng-model="accel.new.url" placeholder="URL">
       <input type="text" class="form-control" ng-model="accel.new.applicants" placeholder="Applicants">
       <input type="text" class="form-control" ng-model="accel.new.class_size" placeholder="Class size">

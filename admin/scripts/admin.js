@@ -58,7 +58,8 @@ angular.module('unicornguide', ['firebase'])
   }
 
   _self.save = function () {
-    $log.info(_self.action);
+    // $log.info(_self.action);
+    // $log.info(JSON.stringify(_self.new));
     if (_self.action === 'edit') {
       _self.data.$save(_self.new);
     } else if (_self.action === 'create'){
@@ -81,9 +82,8 @@ angular.module('unicornguide', ['firebase'])
 
   var addNew = function () {
     $log.info(_self.new);
-    _self.data.$add(_self.new);
+    FB.child("accelerators/" + _self.new.slug).set(_self.new);
     _self.new = {};
   };
-
-
 });
+

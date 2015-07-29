@@ -1,0 +1,13 @@
+<div class="container-fluid ">
+  <div  ng-repeat="accel in accelerators.data" class="col-sm-6 col-md-4">
+    <div class="thumbnail">
+      <img ng-src="{{accel.cover}}" alt="{{accel.name}}">
+      <div class="caption">
+        <h3 ng-bind="accel.name"></h3>
+        <p ng-bind="accel.location"></p>
+        <p ng-bind="accel.about | firstParagraph"><p>
+        <p><a ng-href="#/accelerator/{{accel.slug}}" class="btn btn-default" role="button">Details</a></p>
+      </div>
+    </div>
+  </div>
+</div>

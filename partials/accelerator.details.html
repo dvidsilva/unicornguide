@@ -1,0 +1,8 @@
+<div id="accelerator" class="container-fluid cover" ng-style="{'background-image': 'url('+accelerator.data.cover+')'}">
+  <div class="container">
+    <h2 class="cream1" ng-bind="accelerator.data.name"></h2>
+  </div>
+  <div class="container content">
+    <div ng-bind-html="accelerator.data.about | nl2p"></div>
+  </div>
+</div>
